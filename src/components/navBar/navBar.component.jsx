@@ -7,19 +7,23 @@ const Navbar = () => {
   const userData = useSelector((state) => state.auth.userData);
 
   const showLogIn = () => {
+    if (userData.biz === true) {
+      <Fragment>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/dashboard">
+            Dashboard
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/create-card">
+            Create Business Card
+          </NavLink>
+        </li>
+      </Fragment>;
+    }
     if (userData.email) {
       return (
         <Fragment>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/dashboard">
-              Dashboard
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/create-card">
-              Create Business Card
-            </NavLink>
-          </li>
           <li className="nav-item">{userData.email}</li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/logout">
@@ -32,13 +36,18 @@ const Navbar = () => {
       return (
         <Fragment>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/register">
-              Register
+            <NavLink className="nav-link" to="/user-register">
+              SignUp
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/business-register">
+              Business
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/login">
-              login
+              SignIn
             </NavLink>
           </li>
         </Fragment>
@@ -50,9 +59,10 @@ const Navbar = () => {
     //rename from class to className
     <nav
       className={`navbar navbar-expand-lg navbar-light mb-2 ${
-        loggedIn ? "bg-success" : "bg-warning"
+        loggedIn ? "bg-info" : "bg-warning"
       }`}
     >
+      {console.log("userdata", userData.biz)}
       <div className="container-fluid">
         <button
           className="navbar-toggler"

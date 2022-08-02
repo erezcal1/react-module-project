@@ -7,19 +7,20 @@ body {
   margin: 0;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: center;
 }
 
 #site-top-container {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: auto;
 }
 
 .site-top-logo {
@@ -52,24 +53,6 @@ footer{
   width: 1260px;
   height: 100%;
   text-align: center;
-}
-
-@media screen and (max-width: 1575px) {
-  .site-top-info {
-    width: 1100px;
-  }
-}
-
-@media screen and (max-width: 1410px) {
-  .site-top-info {
-    width: 1000px;
-  }
-}
-
-@media screen and (max-width: 1310px) {
-  .site-top-info {
-    width: 940px;
-  }
 }
 
 @media screen and (max-width: 1239px) {
@@ -123,4 +106,12 @@ footer{
 
 #site-top-fb span {
   font-size: 8pt;
+}
+#copyright {
+  opacity: 0.8;
+  color: black;
+  text-align: center;
+  padding-top: 24px;
+  font-size: 13px;
+  margin-bottom: 0;
 }
