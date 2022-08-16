@@ -87,9 +87,12 @@ const RegisterUserPage = () => {
     }
   };
   return (
-    <form className="row g-3" onSubmit={handle_Submit}>
+    <form
+      className="row g-3 d-flex justify-content-center"
+      onSubmit={handle_Submit}
+    >
       <h1>User Registration</h1>
-      <div className="col-md-6">
+      <div className="col-md-12">
         <label htmlFor="input_FirstName" className="form-label">
           First Name:
         </label>
@@ -101,7 +104,7 @@ const RegisterUserPage = () => {
           onChange={handle_FirstName_Change}
         />
       </div>
-      <div className="col-md-6">
+      <div className="col-md-12">
         <label htmlFor="input_Email" className="form-label">
           Email:
         </label>
@@ -113,7 +116,7 @@ const RegisterUserPage = () => {
           onChange={handle_Email_Change}
         />
       </div>
-      <div className="col-md-3">
+      <div className="col-md-6">
         <label htmlFor="input_Password" className="form-label">
           Password:
         </label>
@@ -131,7 +134,7 @@ const RegisterUserPage = () => {
         )}
       </div>
 
-      <div className="col-md-3">
+      <div className="col-md-6">
         <label htmlFor="input_ConfirmPassword" className="form-label">
           Confirm Password:
         </label>
