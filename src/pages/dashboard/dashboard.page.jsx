@@ -118,6 +118,7 @@ const UserCardsPage = () => {
   };
   return (
     <Fragment>
+      <h1 className="text-center">My Business Cards</h1>
       {renderRowsFromArr(userCards)}
       {dataToEdit && (
         <EditBizCardComponent
