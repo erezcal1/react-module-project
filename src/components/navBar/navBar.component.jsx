@@ -6,21 +6,25 @@ const Navbar = () => {
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   const userData = useSelector((state) => state.auth.userData);
 
-  const showLogIn = () => {
-    if (userData.biz === true) {
-      <Fragment>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/dashboard">
-            Dashboard
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/create-card">
-            Create Business Card
-          </NavLink>
-        </li>
-      </Fragment>;
+  const showBiz = () => {
+    if (userData.biz) {
+      return (
+        <Fragment>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/dashboard">
+              Dashboard
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/create-card">
+              Create Business Card
+            </NavLink>
+          </li>
+        </Fragment>
+      );
     }
+  };
+  const showLogIn = () => {
     if (userData.email) {
       return (
         <Fragment>
@@ -87,7 +91,7 @@ const Navbar = () => {
                 About
               </NavLink>
             </li>
-
+            {showBiz()}
             {showLogIn()}
           </ul>
         </div>

@@ -71,7 +71,11 @@ const RegisterUserPage = () => {
           })
           .then((res) => {
             console.log(res.data);
-            history.push("/login", { email: email, password: password });
+            history.push("/login", {
+              email: email,
+              password: password,
+              viz: false,
+            });
           })
           .catch((err) => {
             console.log("error form axios", err);

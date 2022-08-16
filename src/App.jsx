@@ -10,6 +10,9 @@ import RegisterUserPage from "./pages/registerUser/registerUser.page";
 import RegisterBizPage from "./pages/registerBiz/registerBiz.page";
 import LoginPage from "./pages/login/login.page";
 import LogOutPage from "./pages/logout/logout.component";
+import AuthGuardRoute from "./components/authGuardRoute/authGuardRoute.component";
+import CardsPage from "./pages/bizCard/bizCard.page";
+import UserCardsPage from "./pages/dashboard/dashboard.page";
 
 function App() {
   return (
@@ -20,6 +23,14 @@ function App() {
         <Route path="/" exact>
           <HomePage />
         </Route>
+        <AuthGuardRoute
+          path="/dashboard"
+          component={UserCardsPage}
+        ></AuthGuardRoute>
+        <AuthGuardRoute
+          path="/create-card"
+          component={CardsPage}
+        ></AuthGuardRoute>
         <Route path="/about">
           <AboutPage />
         </Route>

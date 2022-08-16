@@ -69,7 +69,11 @@ const RegisterBizPage = () => {
           })
           .then((res) => {
             console.log(res.data);
-            history.push("/login", { email: email, password: password });
+            history.push("/login", {
+              email: email,
+              password: password,
+              biz: true,
+            });
           })
           .catch((err) => {
             console.log("error form axios", err);
@@ -149,7 +153,7 @@ const RegisterBizPage = () => {
       )}
       <div className="col-12">
         <button type="submit" className="btn btn-primary">
-          Sign in
+          Next
         </button>
       </div>
     </form>

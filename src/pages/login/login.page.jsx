@@ -69,7 +69,8 @@ const LoginPage = () => {
         .then(({ data }) => {
           setShowErrMsg(false);
           afterLogin(data.token);
-          history.push("/");
+          if (data.biz) history.push("/create-card");
+          else history.push("/");
         })
         .catch((err) => {
           setShowErrMsg(true);

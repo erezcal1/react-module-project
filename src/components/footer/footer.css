@@ -1,117 +1,61 @@
-* {
-  box-sizing: border-box;
+.footer-dark {
+  margin-top: 20px;
+  padding: 20px 0;
+  color: #000;
+  background-color: rgb(107, 192, 226);
 }
 
-body {
-  width: 100%;
-  margin: 0;
+.footer-dark h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
+.footer-dark ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
-#site-top-container {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.site-top-logo {
-  width: 300px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  margin: auto;
-}
-
-@media screen and (max-width: 1239px) {
-  .site-top-logo {
-    margin: 20px auto 20px auto;
+@media (max-width: 767px) {
+  .footer-dark .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
   }
 }
 
-.site-top-logo img {
-  width: 100%;
+.footer-dark .item.text {
+  margin-bottom: 36px;
 }
 
-.site-top-info {
-  background: #827c7c;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 1260px;
-  height: 100%;
+@media (max-width: 767px) {
+  .footer-dark .item.text {
+    margin-bottom: 0;
+  }
+}
+
+.footer-dark .item.text p {
+  margin-bottom: 0;
+}
+
+.footer-dark .item.social {
   text-align: center;
 }
 
-@media screen and (max-width: 1239px) {
-  .site-top-info {
-    width: 100%;
+@media (max-width: 991px) {
+  .footer-dark .item.social {
+    text-align: center;
+    margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 673px) {
-  .site-top-info {
-    flex-wrap: wrap;
-  }
-}
-
-.site-top-info i {
-  color: #3c842c;
-}
-
-.site-top-info p {
-  color: white;
-}
-
-.site-top-info a {
-  color: #232323;
-}
-
-#site-top-phone,
-#site-top-mail,
-#site-top-hours,
-#site-top-fb {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 23%;
-  padding: 30px 10px 30px 10px;
-}
-
-@media screen and (max-width: 673px) {
-  #site-top-phone,
-  #site-top-mail,
-  #site-top-hours,
-  #site-top-fb {
-    width: 50%;
-  }
-}
-
-#site-top-hours p {
-  margin-bottom: 0px;
-}
-
-#site-top-fb span {
-  font-size: 8pt;
-}
-#copyright {
-  opacity: 0.8;
-  color: black;
+.footer-dark .copyright {
   text-align: center;
   padding-top: 24px;
+  opacity: 0.3;
   font-size: 13px;
   margin-bottom: 0;
 }
